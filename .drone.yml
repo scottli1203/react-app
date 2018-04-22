@@ -1,0 +1,16 @@
+workspace:
+  base: /var/drone-demo
+  path: react-app
+
+pipeline:
+  install:
+    image: node:latest
+    privileged: true
+    commands:
+      - yarn install
+
+  build:
+    image: node:latest
+    privileged: true
+    commands:
+      - yarn build
