@@ -4,11 +4,11 @@ workspace:
 
 pipeline:
   install:
-    image: node:latest
+    image: yarn:latest
     commands:
       - yarn install
 
   build:
-    image: node:latest
+    image: yarn:latest
     commands:
       - yarn build
