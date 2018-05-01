@@ -1,14 +1,32 @@
 workspace:
-  base: /var/drone-demo
+  base: /shark
   path: react-app
 
 pipeline:
+  restore-cache:
+    image: drillster/drone-volume-cache
+    privileged: true
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
+
   install:
-    image: node:latest
+    image: node:8.9.4
     commands:
       - yarn install
 
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    privileged: true
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
+
   build:
-    image: node:latest
+    image: node:8.9.4
     commands:
-      - yarn build
+      - npm build
