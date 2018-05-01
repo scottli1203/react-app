@@ -3,6 +3,12 @@ workspace:
   path: react-app
 
 pipeline:
+  init:
+    image: docker
+    environment:
+      - DOCKER_HOST=tcp://104.238.149.14:8000
+    commands:
+      - docker --tls=false ps
   restore-cache:
     image: drillster/drone-volume-cache
     privileged: true
@@ -30,3 +36,9 @@ pipeline:
     image: node:8.9.4
     commands:
       - npm build
+
+services:
+  docker:
+    image: docker:dind
+    command: [ "--storage-driver=vfs", "--tls=false" ]
++   privileged: true
