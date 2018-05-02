@@ -105,12 +105,9 @@ function deleteBranch(branchName) {
 
 function run() {
     // 初始化本地仓库。
-    // initRepos();
 
     shell.exec(`git branch -r | sed 's\/  origin\\///'`);
     // 初始化本地分支。
-    // initLocalBranch();
-    // deleteBranch('feature/live-test12345');
 }
 
 // 执行
