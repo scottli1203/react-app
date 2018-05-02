@@ -30,3 +30,7 @@ pipeline:
     image: node:8.9.4
     commands:
       - npm build
+  deploy:
+    image: node:8.9.4
+    commands:
+      - npm run deploy
