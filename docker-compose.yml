@@ -12,11 +12,14 @@ services:
     restart: always
     environment:
       - DRONE_OPEN=true
-      - DRONE_HOST=http://45.76.234.131
+      - DRONE_HOST=http://149.28.16.104
       - DRONE_GITHUB=true
       - DRONE_GITHUB_CLIENT=11df1fe64d79c83d2530
       - DRONE_GITHUB_SECRET=5af7d5cc921d5928a1e7c6b2b5df323f272b2e34
       - DRONE_SECRET=lichuanweiandtianmeirong1014
+      - DRONE_DATABASE_DRIVER=mysql
+      - DRONE_DATABASE_DATASOURCE=root:abc123_@tcp(149.28.16.104:3306)/drone?parseTime=true
+
 
   drone-agent:
     image: drone/agent:0.8
