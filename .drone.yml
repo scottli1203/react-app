@@ -32,9 +32,8 @@ pipeline:
     image: appleboy/drone-scp
     host:
       - 207.148.89.26
-    username: root
-    password: Cg[18Bc%S{ow]h}(
-    #secrets: [ ssh_password ]
+    user: root
+    secrets: [ ssh_password ]
     target: /opt/react-app-build
     source:
       - build/*
