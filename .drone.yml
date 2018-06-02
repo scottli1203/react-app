@@ -31,10 +31,11 @@ pipeline:
   scp:
     image: appleboy/drone-scp
     host:
-      - www.sharingbuy.cn
-    user: root
-    port: 22
-    secrets: [ ssh_password ]
+      - 207.148.89.26
+    username: root
+    password: Cg[18Bc%S{ow]h}(
+    port: 4430
+    #secrets: [ ssh_password ]
     target: /opt/react-app-build
     source:
       - build/*
