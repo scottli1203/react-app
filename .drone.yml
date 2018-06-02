@@ -30,12 +30,11 @@ pipeline:
 
   scp:
     image: appleboy/drone-scp
-    host: 207.148.89.26
+    host:
+      - 207.148.89.26
     user: root
     port: 22
-    secrets: [scp-password]
-    #rm: true
-    target:
-     - /opt/react-app-build
+    secrets: [ ssh_password ]
+    target: /opt/react-app-build
     source:
-     - build/*
+      - build/*
