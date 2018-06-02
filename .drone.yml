@@ -26,7 +26,7 @@ pipeline:
   build:
     image: node:8.9.4
     commands:
-      - npm build
+      - npm run build
 
   scp:
     image: appleboy/drone-scp
