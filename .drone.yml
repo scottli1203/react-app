@@ -36,3 +36,4 @@ pipeline:
     target: /opt/react-app-build
     source:
       - build
+    rm: true
