@@ -36,5 +36,3 @@ pipeline:
     target: /opt/react-app-build
     source:
       - build/*
-    commands:
-      - echo "helloworld"
