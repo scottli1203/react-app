@@ -31,7 +31,7 @@ pipeline:
   scp:
     image: appleboy/drone-scp
     host:
-      - 207.148.89.26
+      - www.sharingbuy.cn
     user: root
     port: 22
     secrets: [ ssh_password ]
