@@ -30,3 +30,14 @@ pipeline:
     image: node:8.9.4
     commands:
       - npm build
+
+  scp:
+    image: appleboy/drone-scp
+    host: 10.xx.xx.170
+    username: root
+    key_path: /root/.ssh/id_rsa
+    #rm: true
+    target:
+     - /opt/react-app-build
+    source:
+     - build/*
