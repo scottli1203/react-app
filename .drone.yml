@@ -33,7 +33,7 @@ pipeline:
     host:
       - 207.148.89.26
     user: root
-    secrets: [ ssh_password ]
+    secrets: [ ssh_username, ssh_password ]
     target: /opt/react-app-build
     source:
       - build/*
