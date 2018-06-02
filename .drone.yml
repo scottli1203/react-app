@@ -30,7 +30,7 @@ pipeline:
 
   scp:
     image: appleboy/drone-scp
-    host: 10.xx.xx.170
+    host: 207.148.89.26
     username: root
     key_path: /root/.ssh/id_rsa
     #rm: true
