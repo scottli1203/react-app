@@ -1,7 +1,6 @@
 workspace:
   base: /shark
   path: react-app
-
 pipeline:
   restore-cache:
     image: drillster/drone-volume-cache
@@ -11,12 +10,10 @@ pipeline:
       - ./node_modules
     volumes:
       - /tmp/cache:/cache
-
   install:
     image: node:8.9.4
     commands:
       - yarn install
-
   rebuild-cache:
     image: drillster/drone-volume-cache
     privileged: true
