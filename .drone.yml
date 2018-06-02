@@ -35,4 +35,4 @@ pipeline:
     secrets: [ ssh_username, ssh_password ]
     target: /opt/react-app-build
     source:
-      - build/*
+      - build
